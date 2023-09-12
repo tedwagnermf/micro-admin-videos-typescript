@@ -22,7 +22,6 @@ export type CategoryUpdateProps = {
     name: string;
     description?: string | null;
 }
-
 export class Category  extends Entity {
     category_id: Uuid;
     name: string;

@@ -24,7 +24,7 @@
 			"extensions": [
 				"orta.vscode-jest",
 				"firsttris.vscode-jest-runner",
-				"esbenp.prettier-vscode"
+				"esbenp.prettier-vscode"				
 			]
 		}
 	}
