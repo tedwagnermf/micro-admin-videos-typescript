@@ -22,7 +22,7 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"orta.vscode-jest",
+				"Orta.vscode-jest",
 				"firsttris.vscode-jest-runner",
 				"esbenp.prettier-vscode"				
 			]

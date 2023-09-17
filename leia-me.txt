@@ -4,6 +4,8 @@ Pendências:
 
 Projeto prático - Typescript (Back-end):
 https://plataforma.fullcycle.com.br/courses/189/168/196
+
+FC3-admin-catalogo-de-videos-typescript
 https://github.com/devfullcycle/FC3-admin-catalogo-de-videos-typescript
 
 Parei aqui:

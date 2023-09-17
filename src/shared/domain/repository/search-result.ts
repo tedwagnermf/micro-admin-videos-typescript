@@ -6,7 +6,6 @@ type SearchResultConstructorProps<E extends Entity> = {
     total: number;
     current_page: number;
     per_page: number;
-    //last_page: number;
 }
 
 export class SearchResult<E extends Entity = Entity> extends ValueObject {
@@ -14,7 +13,7 @@ export class SearchResult<E extends Entity = Entity> extends ValueObject {
     readonly total: number;
     readonly current_page: number;
     readonly per_page: number;
-    //readonly last_page: number;
+    readonly last_page: number;
 
     constructor(props: SearchResultConstructorProps<E>) {
         super();
@@ -22,7 +21,7 @@ export class SearchResult<E extends Entity = Entity> extends ValueObject {
         this.total = props.total;
         this.current_page = props.current_page;
         this.per_page = props.per_page;
-        //this.last_page = Math.ceil(this.total / this.per_page);
+        this.last_page = Math.ceil(this.total / this.per_page);
     }
 
     toJSON(forceEntity = false) {
@@ -33,7 +32,7 @@ export class SearchResult<E extends Entity = Entity> extends ValueObject {
             total: this.total,
             current_page: this.current_page,
             per_page: this.per_page,
-           // last_page: this.last_page,
+            last_page: this.last_page,
         };
     }
 }
