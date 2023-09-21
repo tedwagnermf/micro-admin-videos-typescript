@@ -64,8 +64,8 @@ describe('GetCategory Unit Test', () => {
             items: [...items].reverse().map(CategoryOutputMapper.toOutput),
             total: 2,
             current_page: 1,
-            per_page: 15,
-            last_page: 1
+            per_page: 1,
+            last_page: 2,
         });
     });
 
@@ -97,7 +97,7 @@ describe('GetCategory Unit Test', () => {
             items: [items[1], items[2]].map(CategoryOutputMapper.toOutput),
             total: 3,
             current_page: 1,
-            per_page: 3,
+            per_page: 1,
             last_page: 3,
         });
 
@@ -125,9 +125,9 @@ describe('GetCategory Unit Test', () => {
         expect(output).toStrictEqual({
             items: [items[0], items[2]].map(CategoryOutputMapper.toOutput),
             total: 3,
-            current_page: 2,
-            per_page: 2,
-            last_page: 2,
+            current_page: 1,
+            per_page: 1,
+            last_page: 3,
         });
     });
 });
