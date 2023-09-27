@@ -8,5 +8,9 @@ https://plataforma.fullcycle.com.br/courses/189/168/196
 FC3-admin-catalogo-de-videos-typescript (ver branchs por capítulos)
 https://github.com/devfullcycle/FC3-admin-catalogo-de-videos-typescript
 
+Projeto:
+--------
+https://github.com/tedwagnermf/micro-admin-videos-typescript
+
 Parei aqui:
 -----------
