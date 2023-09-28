@@ -12,6 +12,6 @@ Projeto:
 --------
 https://github.com/tedwagnermf/micro-admin-videos-typescript
 
-Parei aqui:
------------
-https://plataforma.fullcycle.com.br/courses/189/168/196/conteudos?capitulo=196&conteudo=11613
+Assistindo: Integração do Nest.js com Sequelize
+-----------------------------------------------
+https://plataforma.fullcycle.com.br/courses/189/168/196/conteudos?capitulo=196&conteudo=11618

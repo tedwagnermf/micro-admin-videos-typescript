@@ -35,4 +35,4 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 .history/
-leia-me.txt
+*leia-me.txt
