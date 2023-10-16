@@ -18,25 +18,27 @@ import {
 } from '@nestjs/common';
 import { CreateCategoryDto } from './dto/create-category.dto';
 import { UpdateCategoryDto } from './dto/update-category.dto';
-import { CategoryCollectionPresenter, CategoryPresenter } from './categories.presenter';
+import {
+  CategoryCollectionPresenter,
+  CategoryPresenter,
+} from './categories.presenter';
 import { CategoryOutput } from '@core/category/application/use-cases/common/category-output';
-import { serialize } from 'v8';
 import { SearchCategoriesDto } from './dto/search-category.dto';
 @Controller('categories')
 export class CategoriesController {
-  @Inject('CreateCategoryUseCase')
+  @Inject(CreateCategoryUseCase)
   private createUseCase: CreateCategoryUseCase;
 
-  @Inject('UpdateCategoryUseCase')
+  @Inject(UpdateCategoryUseCase)
   private updateUseCase: UpdateCategoryUseCase;
 
-  @Inject('DeleteCategoryUseCase')
+  @Inject(DeleteCategoryUseCase)
   private deleteUseCase: DeleteCategoryUseCase;
 
-  @Inject('GetCategoryUseCase')
+  @Inject(GetCategoryUseCase)
   private getUseCase: GetCategoryUseCase;
 
-  @Inject('ListCategoriesUseCase')
+  @Inject(ListCategoriesUseCase)
   private listUseCase: ListCategoriesUseCase;
 
   @Post()
@@ -54,10 +56,10 @@ export class CategoriesController {
   @Get(':id')
   async findOne(
     @Param('id', new ParseUUIDPipe({ errorHttpStatusCode: 422 })) id: string,
-    ) {
-      const output = await this.getUseCase.execute({ id });
-      return CategoriesController.serialize(output);
-    }
+  ) {
+    const output = await this.getUseCase.execute({ id });
+    return CategoriesController.serialize(output);
+  }
 
   @Patch(':id')
   async update(

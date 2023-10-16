@@ -37,4 +37,7 @@ describe('CategoriesController integration testes', () => {
   it('should create a category', async () => {});
 
   it('should catrgory a category', async () => {});
+  it('Erro no teste integração', () => {
+    expect(1).toBe(1);
+  });
 });
