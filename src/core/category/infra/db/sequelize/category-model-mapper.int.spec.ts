@@ -1,9 +1,9 @@
-import { EntityValidationError } from "../../../../shared/domain/validators/validation.error";
-import { Uuid } from "../../../../shared/domain/value-objects/uuid.vo";
-import { setupSequelize } from "../../../../shared/infra/testing/helpers";
-import { Category } from "../../../domain/category.entity";
-import { CategoryModelMapper } from "./category-model-mapper";
-import { CategoryModel } from "./category.model";
+import { EntityValidationError } from '../../../../shared/domain/validators/validation.error';
+import { Uuid } from '../../../../shared/domain/value-objects/uuid.vo';
+import { setupSequelize } from '../../../../shared/infra/testing/helpers';
+import { Category } from '../../../domain/category.entity';
+import { CategoryModelMapper } from './category-model-mapper';
+import { CategoryModel } from './category.model';
 
 describe('CategoryModelMapper Integration Tests', () => {
   setupSequelize({ models: [CategoryModel] });
@@ -16,7 +16,9 @@ describe('CategoryModelMapper Integration Tests', () => {
     });
     try {
       CategoryModelMapper.toEntity(model);
-      fail('The category is valid, but it needs throws a EntityValidationError');
+      fail(
+        'The category is valid, but it needs throws a EntityValidationError',
+      );
     } catch (e) {
       expect(e).toBeInstanceOf(EntityValidationError);
       expect((e as EntityValidationError).error).toMatchObject([

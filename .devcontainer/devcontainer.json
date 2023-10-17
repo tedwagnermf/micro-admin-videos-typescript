@@ -25,7 +25,7 @@
 				"Orta.vscode-jest",
 				"firsttris.vscode-jest-runner",
 				"esbenp.prettier-vscode",
-				"dbaeumer.vscode-eslint"				
+				"dbaeumer.vscode-eslint"			
 			]
 		}
 	}

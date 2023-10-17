@@ -1,8 +1,8 @@
-import { Entity } from "../../shared/domain/entity";
-import { Uuid } from "../../shared/domain/value-objects/uuid.vo";
-import { ValueObject } from "../../shared/domain/value-objects/value-object";
-import { CategoryFakeBuilder } from "./category-fake.builder";
-import { CategoryValidatorFactory } from "./category.validator";
+import { Entity } from '../../shared/domain/entity';
+import { Uuid } from '../../shared/domain/value-objects/uuid.vo';
+import { ValueObject } from '../../shared/domain/value-objects/value-object';
+import { CategoryFakeBuilder } from './category-fake.builder';
+import { CategoryValidatorFactory } from './category.validator';
 
 export type CategoryConstructorProps = {
   category_id?: Uuid;
@@ -40,7 +40,6 @@ export class Category extends Entity {
 
   static create(props: CategoryCreateCommand): Category {
     const category = new Category(props);
-    //category.validate();
     category.validate(['name']);
     return category;
   }
