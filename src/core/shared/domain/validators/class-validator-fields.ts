@@ -1,5 +1,5 @@
-import { validateSync } from "class-validator";
-import { IValidatorFields } from "./validator-fields-interface";
+import { validateSync } from 'class-validator';
+import { IValidatorFields } from './validator-fields-interface';
 import { Notification } from './notification';
 
 export abstract class ClassValidatorFields implements IValidatorFields {
